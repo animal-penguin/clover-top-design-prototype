@@ -1,0 +1,144 @@
+:root {
+  --ivory: #fff7e4;
+  --blush: #f7d3dd;
+  --rose: #d47f93;
+  --sage: #a8cfc4;
+  --yellow: #fff0a7;
+  --mint: #e0f1ec;
+  --peach: #f8c7aa;
+}
+
+.section-index {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 5px 10px;
+  border: 1px solid #d47f9340;
+  border-radius: 999px;
+  background: #fff9fbcc;
+}
+
+.welcome > *:not(.clover-line),
+.services > *:not(.section-curve, .clover-line),
+.news > *:not(.clover-line) {
+  position: relative;
+  z-index: 2;
+}
+
+.illustration-feature {
+  position: relative;
+  overflow: hidden;
+  padding: 34px 32px 128px;
+  background: #fffaf2;
+}
+
+.illustration-frame {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, 100%);
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid #efb7c7;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 18px 18px 0 var(--mint);
+}
+
+.illustration-frame img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.illustration-dot {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dot-one {
+  top: 5%;
+  left: -7%;
+  width: 280px;
+  height: 280px;
+  background: #fff0a780;
+}
+
+.dot-two {
+  right: -5%;
+  bottom: 8%;
+  width: 220px;
+  height: 220px;
+  background: #f7d3dd9e;
+}
+
+.services::before {
+  display: none;
+}
+
+.section-heading {
+  grid-template-columns: .5fr 1.45fr .8fr;
+  gap: 34px;
+}
+
+.section-heading h2 {
+  white-space: nowrap;
+}
+
+.service-card {
+  border-color: #e9b7c4;
+  box-shadow: 10px 10px 0 #f7d3dd70;
+}
+
+.service-card:nth-child(2) {
+  border-color: #a8cfc4;
+  background: #fbfffd;
+  box-shadow: 10px 10px 0 #d9eee8;
+}
+
+.service-card:nth-child(3) {
+  border-color: #edc27b;
+  background: #fffdf5;
+  box-shadow: 10px 10px 0 #fff0a78c;
+}
+
+.contact {
+  background: var(--blush);
+}
+
+.contact::after {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 100%;
+  background: var(--yellow);
+  clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%, 18% 72%, 8% 42%);
+  content: "";
+}
+
+@media (max-width: 860px) {
+  .illustration-feature {
+    padding: 10px 20px 86px;
+  }
+
+  .illustration-frame {
+    box-shadow: 10px 10px 0 var(--mint);
+  }
+
+  .dot-one {
+    width: 160px;
+    height: 160px;
+  }
+
+  .dot-two {
+    width: 130px;
+    height: 130px;
+  }
+
+  .section-heading h2 {
+    white-space: normal;
+  }
+}
